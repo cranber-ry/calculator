@@ -52,7 +52,7 @@ while (!isValueInput)
         case "5":
             Console.WriteLine($"Вы выбрали {str}"); break;
         default:
-            Console.WriteLine("Ты ввёл невеное значение. Введи число!"); break;
+            Console.WriteLine("Ты ввёл невеное значение!!!!!"); break;
     }
 }
 
@@ -63,12 +63,11 @@ static decimal ReadValid(string prompt)
     var isValid = false;
     while (!isValid)
     {
-        Console.WriteLine(prompt);
+        Console.Write(prompt);
         var input = Console.ReadLine();
         if (decimal.TryParse(input, out number))
         {
             isValid = true;
-            Console.WriteLine($"a = {number}");
         }
         else
         {
